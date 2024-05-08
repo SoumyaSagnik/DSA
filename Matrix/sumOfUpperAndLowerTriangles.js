@@ -25,8 +25,8 @@ function upperTriangleSum(matrix) {
   const matrixDimension = matrix.length;
   let sum = 0;
   for (let i = 0; i < matrixDimension; i++) {
-    for (let j = 0; j < matrixDimension; j++) {
-      if (i <= j) sum += matrix[i][j];
+    for (let j = i; j < matrixDimension; j++) {
+      sum += matrix[i][j];
     }
   }
   return sum;
@@ -36,8 +36,8 @@ function lowerTriangleSum(matrix) {
   const matrixDimension = matrix.length;
   let sum = 0;
   for (let i = 0; i < matrixDimension; i++) {
-    for (let j = 0; j < matrixDimension; j++) {
-      if (i >= j) sum += matrix[i][j];
+    for (let j = 0; j <= i; j++) {
+      sum += matrix[i][j];
     }
   }
   return sum;
