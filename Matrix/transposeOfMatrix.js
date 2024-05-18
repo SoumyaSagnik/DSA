@@ -9,9 +9,9 @@ function transposeOfAMatrix(matrix) {
   const m = matrix.length;
   const n = matrix[0].length;
   let transpose = new Array(n);
-  transpose = transpose.fill([]);
 
   for (let i = 0; i < n; i++) {
+    transpose[i] = new Array(m);
     for (let j = 0; j < m; j++) {
       transpose[i][j] = matrix[j][i];
     }
@@ -44,9 +44,23 @@ console.log(
 );
 
 console.log(
+  transposeOfAMatrix([
+    [1, 2, 3],
+    [4, 5, 6],
+  ])
+);
+
+console.log(
   optimizedSoln([
     [1, 1, 1],
     [2, 2, 2],
     [3, 3, 3],
+  ])
+);
+
+console.log(
+  transposeOfAMatrix([
+    [1, 2, 3],
+    [4, 5, 6],
   ])
 );
