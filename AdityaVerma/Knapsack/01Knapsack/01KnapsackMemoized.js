@@ -16,7 +16,6 @@ for (let i = 0; i < nMax; i++) {
   arr.fill(-1);
   t[i] = arr;
 }
-console.log(t);
 
 function knapsack01(wt, val, W, n) {
   if (W === 0 || n === 0) return 0;
