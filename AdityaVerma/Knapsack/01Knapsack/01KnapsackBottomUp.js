@@ -8,7 +8,7 @@ for (let i = 0; i < t.length; i++) {
 
 function knapsackBottomUp(wt, val, W, n) {
   for (let i = 0; i < n + 1; i++) {
-    for (letj = 0; j < W + 1; j++) {
+    for (let j = 0; j < W + 1; j++) {
       if (i === 0 || j === 0) {
         t[i][j] = 0; // alteration of recursive base condition
         continue;
