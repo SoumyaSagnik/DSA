@@ -47,4 +47,9 @@ It is similar to 0-1 knapsack, but here we have unlimited supply of items. So an
 - Choice is available
 - Optimal output is required
 
-**Approach**: Recursive code -> Memoization/Top-down
+**Approach** Recursive code -> Memoization/Bottom-up
+
+- First we write the recursive code.
+- Then we memoize the recursive code. This is as powerful as bottom-up approach. But sometimes, it may lead to stack overflow.
+- Then we do bottom-up. In this approach, we omit recursive call. create memoized matrix, the 0th row & 0th column become initialization. The recurive approach's base condition becomes bottom-ups' initialization.
+- The matrix dimensions would be the two factors changing in the recursive calls, and since we have to take initialization into account, the matrix dimensions will become [n+1][m+1].
